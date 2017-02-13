@@ -40,11 +40,11 @@ class App extends Component {
     if (!reset && result.length === 9) {
       return result;
     }
-    if (number === '.' && result.indexOf('.') !== -1) {
-      return result;
-    }
     if (number !== '.' && result === '0') {
       return `${number}`;
+    }
+    if (number === '.' && result.indexOf('.') !== -1) {
+      return result;
     }
     if (reset) {
       return `${number}`;
