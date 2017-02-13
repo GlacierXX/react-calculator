@@ -1,0 +1,135 @@
+html, body {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+.App {
+  display: flex;
+  font-family: Arial, sans-serif;
+  max-width: 414px;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  user-select: none;
+  background-color: #202020;
+  outline: 1px solid #202020;
+  margin: 0 auto;
+}
+.App .edit {
+  width: 75%;
+}
+
+.print {
+  width: 100%;
+  height: 110px;
+  line-height: 70px;
+  text-align: right;
+  font-size: 55px;
+  color: #fff;
+  background-color: #202020;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 40px 10px 0 10px;
+}
+
+.operator-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+.operator {
+  position: relative;
+  flex-grow: 1;
+  background-color: #c4c5c6;
+  outline: 1px solid #000;
+  transition: background-color .5s;
+}
+.operator:active {
+  background-color: #b6b7b9;
+}
+.operator::before {
+  content: '';
+  display: inline-block;
+  padding-bottom: 100%;
+}
+.operator span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #000;
+}
+
+.number-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+.number {
+  position: relative;
+  display: inline-block;
+  width: 33.333333333%;
+  background-color: #d0d1d4;
+  outline: 1px solid #000;
+  transition: background-color .5s;
+}
+.number:active {
+  background-color: #b7b9ba;
+}
+.number.double {
+  flex-grow: 2;
+}
+.number::before {
+  content: '';
+  display: inline-block;
+  padding-bottom: 100%;
+}
+.number.double::before {
+  content: '';
+  display: inline-block;
+  padding-bottom: 50%;
+}
+.number span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #000;
+}
+.number.double span {
+  left: 25%;
+}
+
+.compute-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+  width: 25%;
+}
+.compute {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: #e99539;
+  outline: 1px solid #000;
+  transition: background-color .5s;
+}
+.compute:active {
+  background-color: #d38332;
+}
+.compute::before {
+  content: '';
+  display: inline-block;
+  padding-bottom: 100%;
+}
+.compute span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #fff;
+}
